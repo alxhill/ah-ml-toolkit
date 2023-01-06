@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ah-ml-toolkit"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Hill <me@alxhill.com>"]
+readme = "README.md"
+packages = [{include = "ah_ml_toolkit"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^1.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
