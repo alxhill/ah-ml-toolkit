@@ -9,6 +9,7 @@ packages = [{include = "ah_ml_toolkit"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 torch = "^1.13"
+opencv-python = "^4.7.0.68"
 
 
 [build-system]
