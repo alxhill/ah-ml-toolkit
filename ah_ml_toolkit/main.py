@@ -1,16 +1,6 @@
-# This is a sample Python script.
+from toolkit.read_images import images_from_dir, constrain_to_size, imgs_to_tensors
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    inputs = images_from_dir("../data/raw/living_room")
+    resized = constrain_to_size(inputs, (512, 512))
+    tensors = imgs_to_tensors(resized)
