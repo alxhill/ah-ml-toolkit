@@ -19,5 +19,9 @@ def constrain_to_size(imgs: list[Image], limits: tuple[int, int]) -> Image:
     return out
 
 
-def imgs_to_tensors(imgs: list[Image]) -> list[Tensor]:
+import torch
+
+
+def imgs_to_tensor(imgs: list[Image], limits: tuple[int, int]) -> list[Tensor]:
+    torch.hub.load("midas")
     return [transforms.ToTensor()(img) for img in imgs]
